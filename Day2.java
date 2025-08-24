@@ -125,6 +125,65 @@ public class Day2 {
             2. `case value: ... break;`: If the variable matches the value, the code inside this case executes until a `break` statement is encountered.
             3. `default: ... break;`: This is optional and executes if none of the cases match. It acts like the `else` in an if-else statement.
          */
+
+        // Loops
+        // Loops allow you to execute a block of code multiple times.
+        // while loop example
+        int count = 1;
+        while (count <= 5) {
+            System.out.println("Count is: " + count);
+            count++; // Increment count to avoid infinite loop
+        }
+
+        /*
+         Breaking down the while loop:
+         1. `while (condition) { ... }`: The code inside the curly braces executes repeatedly as long as the condition is true.
+         2. The condition is checked before each iteration of the loop.
+         
+         Make sure to modify a variable involved in the condition (like `count` here) to eventually make the condition false, or you'll create an infinite loop!
+         Or, you can use a `break` statement inside the loop to exit it based on some condition.
+         */
+
+        // for loop example
+        for (int i = 1; i <= 5; i++) {
+            System.out.println("i is: " + i);
+        }
+        /*
+         Breaking down the for loop:
+         1. `for (initialization; condition; update) { ... }`: This loop has three parts:
+            - Initialization: executed once at the beginning (e.g., `int i = 1`).
+            - Condition: checked before each iteration (e.g., `i <= 5`).
+            - Update: executed after each iteration (e.g., `i++`).
+         2. The code inside the curly braces executes repeatedly as long as the condition is true.
+         */
+
+        // do-while loop example
+        int j = 1;
+        do {
+            System.out.println("j is: " + j);
+            j++;
+        } while (j <= 5);
+        /*
+         Breaking down the do-while loop:
+         1. `do { ... } while (condition);`: The code inside the curly braces executes at least once, and then repeatedly as long as the condition is true.
+         2. The condition is checked after each iteration of the loop.
+        
+         This is useful when you want to ensure that the loop body executes at least once, regardless of the condition.
+         */
+
+        // You can also nest loops and control flow statements within each other to create more complex logic.
+        // Let's create a simple multiplication table using nested loops
+        Scanner scanner = new Scanner(System.in); // Create a Scanner object to read input
+        System.out.print("Enter a number to generate its multiplication table: ");
+        int tableNumber = scanner.nextInt(); // Read an integer from user input
+        System.out.println("Multiplication Table for " + tableNumber + ":");
+        for (int m = 1; m <= tableNumber; m++) { // Outer loop for the multiplier
+            for (int loopIndex = 1; loopIndex <= tableNumber; loopIndex++) { // Inner loop for the multiplicand
+                System.out.println(m + " x " + loopIndex + " = " + (m * loopIndex)); // Print the multiplication result
+            }
+            System.out.println(); // Print a blank line after each table
+        }
+        scanner.close(); // Close the scanner to prevent resource leaks
      }
 
 
