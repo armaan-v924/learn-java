@@ -23,21 +23,28 @@ public class Book {
     }
 
     public String getTitle() {
-        return title;
+        return this.title;
     }
 
     public String getAuthor() {
-        return author;
+        return this.author;
     }
 
     public double getPrice() {
-        return price;
+        return this.price;
+    }
+
+    public void setPrice(double price) {
+        if (price < 0) {
+            return; // Prevent setting a negative price
+        }
+        this.price = price;
     }
 
     public double getDiscountedPrice(double percent) {
         if (percent < 0 || percent > 100) {
             throw new IllegalArgumentException("Percent must be between 0 and 100");
         }
-        return price * (1 - percent / 100);
+        return this.price * (1 - percent / 100.0);
     }
 }

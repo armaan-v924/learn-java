@@ -8,6 +8,13 @@ Practice:
         In main, create 3 books and print their discounted prices.
 */
 
+/* Statics:
+A static variable belongs to the class rather than any specific instance. There is only one copy of a static variable, regardless of how many objects are created from the class.
+A static method can be called without creating an instance of the class. It can only directly access static variables and other static methods.
+
+For example, a static variable can be used to keep track of the number of instances created from a class, and a static method can be used to retrieve that count.
+ */
+
 public class Day4 {
     // Let's go over classes. Note: the practice problem will be solved in Day4/Book.java, but the main will be here
 
